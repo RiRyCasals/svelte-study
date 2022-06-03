@@ -1,3 +1,38 @@
-<h1 class="text-red-600 text-xl">RiRy Casals</h1>
-<p>ここはPage1です</p>
-<a href="/page2" target="">Page2へ</a>   
+<script>
+    import ProductCard from "../components/ProductCard.svelte";
+
+    const dataList = [
+        {
+            productTitle: "arduioで作る電子ピアノ",
+            productUrl: "https://github.com/RiRyCasals/arduino",
+            cardColor: "indigo",
+        },
+        {
+            productTitle: "笑い男アプリ",
+            productUrl: "https://github.com/RiRyCasals/python-laughingman",
+        },
+        {
+            productTitle: "Nimのクロスコンパイル環境",
+            productUrl: "https://github.com/RiRyCasals/nim-cross-compile-env",
+            cardColor: "yellow",
+        },
+    ]
+</script>
+
+<title>Home</title>
+
+<div class="text-center mx-20">
+    <h1 class="text-3xl lg:text-6xl">RiRy Casals</h1>
+    <div class="mt-4">
+        <p>IT系の専門学校の学生です．</p>
+        <p>Python でできることなら何でもやってます．</p>
+        <p>ここ最近は Nim という言語に浮気しています．</p>
+    </div>
+    {#each dataList as data}
+        <ProductCard
+            productTitle={data.productTitle}
+            productUrl={data.productUrl}
+            cardColor={data.cardColor}
+        />
+    {/each}
+</div>
