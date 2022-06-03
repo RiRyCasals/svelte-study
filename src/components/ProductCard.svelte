@@ -2,7 +2,7 @@
     export let productTitle: string;
     export let productUrl: string;
     export let productLink: string = "→ GitHub";
-    export let cardColor: string = "blue";
+    export let cardColor: string;
     export let colorIntensity:string = "200";
     export let colorIntensityForHover:string = "100";
 </script>
